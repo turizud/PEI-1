@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>orçamento</title>
+
+  <!-- Bootstrap início -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Bootstrap fim -->
+
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <script src="JS/app.js"></script>
+
+  </head>
+
+  <body onload="carregaLista()">
+
+	<header id="area-cabecalho">
+		
+		<article id="area-logo">
+			<h1>Estudio Sublime <div class="l_cabecalho">Despesas e Horarios</div></h1>
+		</article>
+
+	</header>
+
+  
+  <nav>
+
+		<form>
+
+			<h3 class="marca_horario">Marcar Horario</h3>
+
+          <select id="mes" autofocus>
+            <option value="">Mês</option>
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+            <option value="4">Abril</option>
+            <option value="5">Maio</option>
+            <option value="6">Junho</option>
+            <option value="7">Julho</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+          </select>
+
+      <input id="dia" type="date" required>
+
+      <input id="hora" type="time" required id="hora" autofocus>
+	  
+      <select id="tipo" autofocus>
+          <option value="">Tipo</option>
+          <option value="1">Manicure</option>
+          <option value="2">Gel</option>
+          <option value="3">Fibra</option>
+          <option value="4">Manutenção</option>
+      </select>
+
+      <input id="descricao" type="text" placeholder="nome do cliente" autofocus>
+
+      <input id="valor" type="number" placeholder="valor total + desconto" autofocus>
+       
+       <div>
+      <button  type="submit" onclick="cadastrarDespesa()">confirmar</button>
+      <a  href="consulta.html">consultar</a>
+      </div>
+  
+			
+		</form>
+
+		<table class="tabela_lateral" border="1">
+
+      <tr>
+       <th>Serviço</th>
+       <th>Preço</th>
+      </tr>
+
+      <tr>
+       <td>Manicure</td>
+       <td>R$24,99</td>
+      </tr>
+
+      <tr>
+       <td>Gel</td>
+       <td>R$49,99</td>
+      </tr>
+
+      <tr>
+       <td>Fibra</td>
+       <td>R$49,99</td>
+      </tr>
+
+
+      <tr>
+       <td>Manutenção</td>
+       <td>R$29,99</td>
+      </tr>
+
+		</table>
+
+		<article>
+
+			<table class="tabela" border="1">
+
+      <tr>
+       <th>Dia a dia</th>
+       <th>Desconto</th>
+       <th>valor</th>
+      </tr>
+
+      <tr>
+        <td>Segunda e Terça</td>
+        <td>R$10 Na Manutenção</td>
+        <td>de R$29,99 por R$19,99</td>
+      </tr>
+
+       <tr>
+        <td>Quarta e Quinta</td>
+        <td>R$10 nas Gel</td>
+        <td>de R$49,99 por R$39,99</td>
+      </tr>
+
+      <tr>
+        <td>Sexta </td>
+        <td>R$10 na Fibra</td>
+        <td>de R$49,99 por R$39,99</td>
+      </tr>
+
+      <tr>
+        <td>Sabado</td>
+        <td>ganhe uma Manuteção gratis fazendo Gel ou Fibra</td>
+        <td>R$0,00</td>
+      </tr>
+      
+     </table>
+		</article>
+
+
+		<footer id="rodape">
+		  Amanda Fernandes
+		</footer>
+
+	</nav>
+
+   <!-- Modal --> <!--
+  <div class="modal fade" id="registraDespesas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div id="modal_titulo_div">
+          <h5 class="modal-title" id="modal_titulo"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modal_conteudo"> </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" id="model_btn">  </button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+</body>
+</html>

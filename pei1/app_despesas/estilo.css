@@ -1,0 +1,136 @@
+body{background: linear-gradient(DeepSkyBlue,violet,white);}
+
+
+#area-cabecalho {
+	text-align: center;
+	margin: 2% 1%;
+	padding: 1%;
+    width: 96%;
+    height: 110px;
+    line-height: 20px;
+    border-radius: 15px;
+    background: radial-gradient(white,violet); /* cores do cabeçalho, são duas cores em espiral*/
+    box-shadow: 0px 0px 5px rgba(0,0, 0.3); /*sombra*/
+}
+
+
+form{
+	margin: 1%;
+	border-radius: 20px; /*arrendondamento da borda*/
+	display: block;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 40%;
+    backdrop-filter: brightness(90%); /*escurecer o fundo pra ficar com a cor de fundo*/
+    box-shadow: 0px 0px 5px rgba(0,0, 0.3); /*sombra*/
+    flex-direction: column;
+    display: flex;
+    gap: 15px; /*espaçamento entresas perguntas*/ 
+   }
+
+.tabela{float: right; /* pra flutuar pro lado*/
+	border-radius: 8px; /*arrendondamento da borda*/
+	display: block; /* as letras ficam compactada*/
+    padding:10px;
+    width: 70%; /*o meio da tabela*/
+    /*margin: 0 auto;*/
+    background-color: Thistle; /*cor da tabela*/
+    box-shadow: 0px 0px 5px rgba(0,0, 0.3); /*sombra*/
+    margin: 1%;
+}
+
+.tabela_lateral{
+	float: left;  /* pra flutuar pro lado*/
+	margin: 1%;
+	border-radius: 8px; /*arrendondamento da borda*/
+	display: block; /* as letras ficam compactada*/
+    padding:10px;
+    width: 18%; /*o meio da tabela*/
+    height: 60%;
+    /*margin: 0 auto;*/
+    background-color: Thistle;  /*cor da tabela*/
+    box-shadow: 0px 0px 5px rgba(0,0, 0.3); /*sombra*/
+}
+
+tr:hover{ /* cor de quando passa o curso na tabela*/
+    background: linear-gradient(red, white) /* cores do cabeçalho, são duas cores em degrade*/
+}
+
+tr{
+	text-transform: uppercase; /*letras em negrito e maiusculas*/
+	font-size: 80%;
+	letter-spacing: 0.1em; /*espaçamento entre as letras*/
+}
+
+input, #mes, #tipo{background: linear-gradient(DeepSkyBlue,white) right; /*cor da caixa da pergunta*/
+    height: 22px; /*tamanho da caixa de pergunta*/
+    line-height: 10px; /*espaçamento de dentro*/
+    border-radius: 7px; /*arredondamento*/
+    margin: 3px 0px; 
+    border: none; /*sem linha na borda*/
+    box-shadow: 0px 0px 5px rgba(0,0, 0.3); /*sombra*/
+    color:black ; /*cor da letra*/
+    text-transform: uppercase;/*letras em maiusculas*/
+    font-size: 13px /*tamanho da letra*/
+}
+
+
+#rodape {
+	clear: both;
+	text-align: center;
+	padding: 10px;
+	background: linear-gradient(violet,DeepSkyBlue);
+	font-size: 1.3em;
+	border-radius: 5px;
+}
+
+/*
+**** Formatação do menu ****
+*/
+ button, a {
+	text-decoration: none;/*tira a linha do link*/
+	text-transform: uppercase;
+    background: linear-gradient(red,white) ; /*cor da caixa da pergunta*/
+    width: 140px;
+    height: 28px;
+    border-radius: 7px; /*arredondamento*/
+    text-align: center;
+    margin: 1px 30px;
+    padding: 1px 8px; 
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0,0, 0.3); /*sombra*/
+    color:black ; /*cor da letra*/	
+    font-size: 1.1em;
+    letter-spacing: 0.1em; /*espaçamento entre as letras*/	
+}
+
+a:hover{ /*ao passar o mouse*/
+    text-decoration: none;/*tirando a linha do link*/
+    color: black; /*cor da letra*/
+}
+
+
+/*
+**** Formatações em geral ****
+*/
+h1 {
+	color: black;
+	font-size: 2.5em;
+}
+
+.l_cabecalho{
+    color: Thistle ;
+}
+
+.marca_horario {
+	background: linear-gradient(DeepSkyBlue,Purple) ; /*cor da caixa da pergunta*/
+    height: 28px; /*tamanho da caixa de pergunta*/
+    width: 80%;
+    border-radius: 7px; /*arredondamento*/
+    text-align: center; /*texto no centro*/
+    margin: 0 auto;  /*centralizar*/
+    border: none;/*tira a borda*/
+    box-shadow: 0px 0px 5px rgba(0,0, 0.3); /*sombra*/
+    color:black ; /*cor da letra*/
+    font-size: 23px; /* tamanho da fonte*/
+}
